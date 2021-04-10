@@ -269,7 +269,12 @@ service_env:
   dial:
     - ../../../../ansible/roles/stack-sunbird/templates/dial-service_application.conf
     - ../../../../ansible/roles/stack-sunbird/templates/dial-service_logback.xml
-
+  sl-sunbird: ../../../../ansible/roles/stack-sunbird/templates/sl-sunbird-service.env
+  kendra: ../../../../ansible/roles/stack-sunbird/templates/kendra-service.env
+  kendra: ../../../../ansible/roles/stack-sunbird/templates/assessment-fcm-keystore.json
+  kendra: ../../../../ansible/roles/stack-sunbird/templates/fcm-keystore.json
+  kendra: ../../../../ansible/roles/stack-sunbird/templates/gcp.json
+  kendra: ../../../../ansible/roles/stack-sunbird/templates/improvement-fcm-keystore.json
 sunbird_portal_player_cdn_enabled: false
 
 ########### stack-apimanager defaults vars ##### for kubernetes #########
@@ -281,6 +286,66 @@ kong_limit_memory: 256M
 kibana_oauth_authenticated_email_domains: []
 
 ##### livenessprobe and readinessprobe #######
+
+kendra_liveness_readiness:
+  healthcheck: true
+  readinessProbe:
+    httpGet:
+      path: /ping
+      port: 4202
+    initialDelaySeconds: 30
+    periodSeconds: 30
+    timeoutSeconds: 10
+    failureThreshold: 5
+    successThreshold: 2
+  livenessProbe:
+    httpGet:
+      path: /ping
+      port: 4202
+    initialDelaySeconds: 30
+    periodSeconds: 30
+    timeoutSeconds: 10
+    failureThreshold: 5
+
+dial_liveness_readiness:
+  healthcheck: true
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: 9000
+    initialDelaySeconds: 30
+    periodSeconds: 30
+    timeoutSeconds: 10
+    failureThreshold: 5
+    successThreshold: 2
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: 9000
+    initialDelaySeconds: 30
+    periodSeconds: 30
+    timeoutSeconds: 10
+    failureThreshold: 5
+
+sl_sunbird_liveness_readiness:
+  healthcheck: true
+  readinessProbe:
+    httpGet:
+      path: /ping
+      port: 4551
+    initialDelaySeconds: 30
+    periodSeconds: 30
+    timeoutSeconds: 10
+    failureThreshold: 5
+    successThreshold: 2
+  livenessProbe:
+    httpGet:
+      path: /ping
+      port: 4551
+    initialDelaySeconds: 30
+    periodSeconds: 30
+    timeoutSeconds: 10
+    failureThreshold: 5
 
 dhiti_liveness_readiness:
   healthcheck: false
