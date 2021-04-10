@@ -15,14 +15,13 @@ resources:
     cpu: {{kendra_cpu_limit|default('1')}}
     memory: {{kendra_mem_limit|default('1024Mi')}}
 network:
-  port: 4202
-  targetport: 4202
+  port: 7001
+  targetport: 7001
 strategy:
   type: RollingUpdate
   maxsurge: {{ kendra_maxsurge|default('25%') }}
   maxunavailable: {{ kendra_maxunavailable|default('25%') }}
   
 {{ kendra_liveness_readiness | to_nice_yaml }}
-
 kendra_access_basepath: {{ kendra_access_basepath | default('/opt/kendra/keycloak-public-keys/') }}
 
