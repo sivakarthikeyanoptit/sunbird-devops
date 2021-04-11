@@ -271,10 +271,7 @@ service_env:
     - ../../../../ansible/roles/stack-sunbird/templates/dial-service_logback.xml
   sl-sunbird: ../../../../ansible/roles/stack-sunbird/templates/sl-sunbird-service.env
   kendra-service: ../../../../ansible/roles/stack-sunbird/templates/kendra-service.env
-  kendra-service: ../../../../ansible/roles/stack-sunbird/templates/assessment-fcm-keystore.json
-  kendra-service: ../../../../ansible/roles/stack-sunbird/templates/fcm-keystore.json
-  kendra-service: ../../../../ansible/roles/stack-sunbird/templates/gcp.json
-  kendra-service: ../../../../ansible/roles/stack-sunbird/templates/improvement-fcm-keystore.json
+  
 sunbird_portal_player_cdn_enabled: false
 
 ########### stack-apimanager defaults vars ##### for kubernetes #########
