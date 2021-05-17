@@ -1,0 +1,8 @@
+- hosts: secor
+  become: yes
+  vars_files:
+    - ['{{inventory_dir}}/secrets.yml']
+  name: Installing and configuring monit
+  roles:
+    - { role: monit, service: 'monit_faust_survey_evidence,monit_faust_survey,monit_faust_observation_evidence,monit_faust_observation' }
+  tags: secor
