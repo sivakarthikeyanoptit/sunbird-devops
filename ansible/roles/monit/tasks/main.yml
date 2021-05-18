@@ -15,9 +15,9 @@
     - /var/lib/monit
   notify: restart monit
 
-- name: Copy monitrc file
-  template: src=monitrc dest=/etc/monit/monitrc
-  notify: restart monit
+#- name: Copy monitrc file
+  #template: src=monitrc dest=/etc/monit/monitrc
+  #notify: restart monit
 
 - name: Copy monit init.d file
   template: src=monit dest=/etc/init.d/monit mode=0754
