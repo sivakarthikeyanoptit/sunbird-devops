@@ -1,15 +1,15 @@
 ---
 
-- debug:
+#- debug:
     msg="{{ groups['swarm-agent-for-alertmanager'][0] }}" 
 
-- debug:
+#- debug:
     msg="{{ groups['swarm-agent-for-prometheus'][0] }}"
 
-- debug:
+#- debug:
     msg="{{ alertmanager_host }}"
 
-- debug:
+#- debug:
     msg="{{ prometheus_host }}"
 
 
