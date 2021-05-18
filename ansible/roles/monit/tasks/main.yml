@@ -1,10 +1,8 @@
 ---
-
 - debug:
-    msg="{{ alertmanager_host }}"
-
+    msg= "{{ alertmanager_host }}"
 - debug:
-    msg="{{ prometheus_host }}"
+    msg= "{{ prometheus_host }}"
 
 - name: Install Monit
   apt: 
