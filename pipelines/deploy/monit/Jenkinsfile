@@ -35,11 +35,17 @@ node() {
                 values.put('ansibleExtraArgs', ansibleExtraArgs)
                 println values
                 ansible_playbook_run(values)
+                archiveArtifacts 'metadata.json'
+            currentBuild.description = "Image: ${values.image_tag}, Private: ${params.private_branch}, Public: ${params.branch_or_tag}"
             }
         }
          summary()
      }
     catch (err) {
         throw err
+    }
+    finally {
+        slack_notify(currentBuild.result)
+        email_notify()
     }
 }
