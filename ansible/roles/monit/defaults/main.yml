@@ -6,9 +6,6 @@ monitor_alerts_slack_channel: ""
 monit_slack_webhook_url: "{{ monitor_alerts_slack_url }}"
 monit_slack_channel: "{{ monitor_alerts_slack_channel }}"
 
-## Mail config
-mail_server_host: smtp.sendgrid.net
-
 # Override values based on templates starting with check_
 monit_checks: []
 
