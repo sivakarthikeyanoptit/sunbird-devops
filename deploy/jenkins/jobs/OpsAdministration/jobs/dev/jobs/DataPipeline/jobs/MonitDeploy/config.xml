@@ -30,11 +30,11 @@ return """&lt;input name="value" value="${private_repo_branch}" class="setting-i
 }
 else
 return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureScript>
             <secureFallbackScript plugin="script-security@1.71">
               <script>return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureFallbackScript>
           </script>
           <projectName>MonitDeploy</projectName>
@@ -57,11 +57,11 @@ return """&lt;input name="value" value="" class="setting-input"  type="text"&gt;
 }
 else
 return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureScript>
             <secureFallbackScript plugin="script-security@1.71">
               <script>return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureFallbackScript>
           </script>
           <projectName>MonitDeploy</projectName>
@@ -110,12 +110,12 @@ return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>https://github.com/kaali09/sunbird-data-pipeline.git</url>
+          <url>https://github.com/project-sunbird/sunbird-data-pipeline.git</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>
         <hudson.plugins.git.BranchSpec>
-          <name>release-3.2.0</name>
+          <name>${branch_or_tag}</name>
         </hudson.plugins.git.BranchSpec>
       </branches>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>

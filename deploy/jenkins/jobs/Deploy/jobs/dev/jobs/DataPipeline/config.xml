@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<com.cloudbees.hudson.plugins.folder.Folder plugin="cloudbees-folder@6.12">
+<com.cloudbees.hudson.plugins.folder.Folder plugin="cloudbees-folder@6.15">
   <actions/>
   <description></description>
   <properties>
-    <org.jenkinsci.plugins.docker.workflow.declarative.FolderConfig plugin="docker-workflow@1.23">
+    <org.jenkinsci.plugins.docker.workflow.declarative.FolderConfig plugin="docker-workflow@1.26">
       <dockerLabel></dockerLabel>
-      <registry plugin="docker-commons@1.16"/>
+      <registry plugin="docker-commons@1.17"/>
     </org.jenkinsci.plugins.docker.workflow.declarative.FolderConfig>
   </properties>
   <folderViews class="com.cloudbees.hudson.plugins.folder.views.DefaultFolderViewHolder">
@@ -35,7 +35,7 @@
         <refreshFrequency>3</refreshFrequency>
         <showPipelineDefinitionHeader>false</showPipelineDefinitionHeader>
       </au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView>
-      <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.12">
+      <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.15">
         <owner class="com.cloudbees.hudson.plugins.folder.Folder" reference="../../../.."/>
         <name>dahs</name>
         <filterExecutors>false</filterExecutors>
@@ -53,7 +53,7 @@
           <hudson.views.LastFailureColumn/>
           <hudson.views.LastDurationColumn/>
           <hudson.views.BuildButtonColumn/>
-          <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@2.3.2"/>
+          <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@2.3.3"/>
         </columns>
         <recurse>false</recurse>
         <useCssStyle>false</useCssStyle>

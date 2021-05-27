@@ -38,11 +38,11 @@ return &quot;&quot;&quot;&lt;input name=&quot;value&quot; value=&quot;${private_
 }
 else
 return &quot;&quot;&quot;&lt;b&gt;This parameter is not used&lt;/b&gt;&quot;&quot;&quot;</script>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureScript>
             <secureFallbackScript plugin="script-security@1.66">
               <script>return &quot;&quot;&quot;&lt;b&gt;This parameter is not used&lt;/b&gt;&quot;&quot;&quot;</script>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureFallbackScript>
           </script>
           <projectName>BootstrapCluster</projectName>
@@ -65,11 +65,11 @@ return &quot;&quot;&quot;&lt;input name=&quot;value&quot; value=&quot;&quot; cla
 }
 else
 return &quot;&quot;&quot;&lt;b&gt;This parameter is not used&lt;/b&gt;&quot;&quot;&quot;</script>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureScript>
             <secureFallbackScript plugin="script-security@1.66">
               <script>return &quot;&quot;&quot;&lt;b&gt;This parameter is not used&lt;/b&gt;&quot;&quot;&quot;</script>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureFallbackScript>
           </script>
           <projectName>BootstrapCluster</projectName>
@@ -104,7 +104,7 @@ return &quot;&quot;&quot;&lt;b&gt;This parameter is not used&lt;/b&gt;&quot;&quo
       </userRemoteConfigs>
       <branches>
         <hudson.plugins.git.BranchSpec>
-          <name>release-2.8.0</name>
+          <name>${branch_or_tag}</name>
         </hudson.plugins.git.BranchSpec>
       </branches>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>

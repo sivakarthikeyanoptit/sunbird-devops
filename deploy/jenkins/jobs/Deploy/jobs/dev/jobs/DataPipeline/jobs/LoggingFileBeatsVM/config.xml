@@ -29,7 +29,7 @@ return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
             </secureFallbackScript>
           </script>
           <projectName>LoggingFileBeatsVM</projectName>
-          <projectFullName>Deploy/staging/Kubernetes/LoggingFileBeatsVM</projectFullName>
+          <projectFullName>Deploy/dev/DataPipeline/LoggingFileBeatsVM</projectFullName>
           <parameters class="linked-hash-map"/>
           <referencedParameters/>
           <choiceType>ET_FORMATTED_HTML</choiceType>
@@ -56,7 +56,7 @@ return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
             </secureFallbackScript>
           </script>
           <projectName>LoggingFileBeatsVM</projectName>
-          <projectFullName>Deploy/staging/Kubernetes/LoggingFileBeatsVM</projectFullName>
+          <projectFullName>Deploy/dev/DataPipeline/LoggingFileBeatsVM</projectFullName>
           <parameters class="linked-hash-map"/>
           <referencedParameters/>
           <choiceType>ET_FORMATTED_HTML</choiceType>
@@ -97,11 +97,11 @@ return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
             </secureScript>
             <secureFallbackScript plugin="script-security@1.75">
               <script/>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureFallbackScript>
           </script>
           <projectName>LoggingFileBeatsVM</projectName>
-          <projectFullName>Deploy/staging/Kubernetes/LoggingFileBeatsVM</projectFullName>
+          <projectFullName>Deploy/dev/DataPipeline/LoggingFileBeatsVM</projectFullName>
           <choiceType>PT_MULTI_SELECT</choiceType>
           <filterable>false</filterable>
           <filterLength>1</filterLength>
@@ -120,11 +120,11 @@ return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
             </secureScript>
             <secureFallbackScript plugin="script-security@1.75">
               <script/>
-              <sandbox>false</sandbox>
+              <sandbox>true</sandbox>
             </secureFallbackScript>
           </script>
           <projectName>LoggingFileBeatsVM</projectName>
-          <projectFullName>Deploy/staging/Kubernetes/LoggingFileBeatsVM</projectFullName>
+          <projectFullName>Deploy/dev/DataPipeline/LoggingFileBeatsVM</projectFullName>
           <choiceType>PT_SINGLE_SELECT</choiceType>
           <filterable>false</filterable>
           <filterLength>1</filterLength>
