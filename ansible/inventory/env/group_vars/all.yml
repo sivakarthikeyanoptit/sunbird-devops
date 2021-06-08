@@ -126,7 +126,7 @@ cassandra_root_dir: '/etc/cassandra'
 cassandra_version: '3.9'
 cassandra_port: 9042
 cassandra_rpc_address: 0.0.0.0
-cassandra_restore_dir: /home/deployer/
+cassandra_restore_dir: "/home/{{ ansible_ssh_user }}/"
 cassandra_backup_azure_container_name: cassandra-backup
 cassandra_backup_dir: /data/cassandra/backup
 
@@ -411,7 +411,6 @@ sunbird_cloud_storage_urls: 'https://s3.ap-south-1.amazonaws.com/ekstep-public-{
 sunbird_email_max_recipients_limit: 100
 sunbird_cassandra_consistency_level: one
 sunbird_cassandra_replication_strategy: '{"class":"SimpleStrategy","replication_factor":"1"}'
-medium_rate_limit_per_hour: 5000
 sunbird_lock_expiry_time: 3600
 app_es_heap_size: 1500m
 log_es_heap_size: 1500m
